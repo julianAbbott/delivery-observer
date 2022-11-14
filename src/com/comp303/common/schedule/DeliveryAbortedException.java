@@ -1,4 +1,4 @@
-package comp303.common.schedule;
+package com.comp303.common.schedule;
 
 public class DeliveryAbortedException extends Exception{ 
 	public DeliveryAbortedException() {

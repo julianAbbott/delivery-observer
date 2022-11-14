@@ -1,4 +1,4 @@
-package comp303.common.util;
+package com.comp303.common.util;
 
 public class Employee {
 	
