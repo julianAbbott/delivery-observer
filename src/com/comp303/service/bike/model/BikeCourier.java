@@ -1,4 +1,4 @@
-package com.comp303.service.bike;
+package com.comp303.service.bike.model;
 
 import com.comp303.common.util.Employee;
 

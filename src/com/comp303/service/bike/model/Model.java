@@ -1,4 +1,4 @@
-package com.comp303.service.bike;
+package com.comp303.service.bike.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
