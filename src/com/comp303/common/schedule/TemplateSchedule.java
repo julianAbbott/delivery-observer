@@ -22,7 +22,6 @@ public abstract class TemplateSchedule implements Scheduler{
 		log();
 
 	}
-	
 
 	protected abstract void executeAddLogic(Object o);
 

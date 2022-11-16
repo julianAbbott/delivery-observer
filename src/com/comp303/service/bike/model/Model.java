@@ -5,19 +5,20 @@ import java.util.Collection;
 import java.util.List;
 
 import com.comp303.common.*;
-import com.comp303.common.schedule.AbstractBikerSchedule;
+import com.comp303.common.schedule.TemplateSchedule;
 import com.comp303.common.schedule.Scheduler;
+import com.comp303.common.schedule.SchedulingErrorException;
 import com.comp303.common.util.Employee;
 import com.comp303.common.util.Observer;
 
 public class Model {
 
-	private AbstractBikerSchedule aSchedule;
+	private TemplateSchedule aSchedule;
 	List<Observer> aObservers = new ArrayList<Observer>();
 	private BikeCourier aCurBiker;
 
-	public Model(AbstractBikerSchedule pScheduler) { 
-		aSchedule = pScheduler;  
+	public Model(TemplateSchedule pSchedule) { 
+		aSchedule = pSchedule;  
 	}
 	
 	
@@ -31,7 +32,7 @@ public class Model {
 		}
 		
 	}
-	public void setBiker() throws DeliveryAbortedException {
+	public void setBiker() throws SchedulingErrorException {
 		aCurBiker = (BikeCourier) aSchedule.getNext();
 		notifyObservers();
 	}
