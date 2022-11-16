@@ -1,5 +1,10 @@
 package com.comp303.common.util;
 
+/**
+ * Plain Java Object for Employee profiles
+ * @author julian
+ *
+ */
 public class Employee {
 	
 	private final String aName;
