@@ -46,88 +46,87 @@ public class TestModel {
 		assertTrue(myModel.getObservers().size() == 1);
 	}
 	
-//	@Test
-//	public void testNotifyObserverSingle() throws SchedulingErrorException {
-//		bikePool.add(james);
-//		bikePool.add(beatrice);
-//		bikePool.add(jackson);
-//		mySchedule.populateSchedule(bikePool);
-//
-//		PackagePanel myPackagePanel= new PackagePanel(myModel);
-//		myModel.setBiker(); 
-//		
-//		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
-// 		
-//	}
-//	
-//	@Test
-//	public void testNotifyObserver2() throws DeliveryAbortedException {
-//		bikePool.add(james);
-//		bikePool.add(beatrice);
-//		bikePool.add(jackson);
-//		mySchedule.populateSchedule(bikePool);
-//
-//		PackagePanel myPackagePanel= new PackagePanel(myModel); 
-//		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
-//		myModel.setBiker(); 
-//		
-//		Model m = myModel;
-//		ArrayList<BikeCourier> b = bikePool;
-//		TestAlgorithm algo = mySchedule;
-//		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
-//	
-//	}
-//	
-//	@Test
-//	public void testNotifyObserver3()throws DeliveryAbortedException{
-//		bikePool.add(james);
-//		bikePool.add(beatrice);
-//		bikePool.add(jackson);
-//		mySchedule.populateSchedule(bikePool);
-//
-//		PackagePanel myPackagePanel= new PackagePanel(myModel); 
-//		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
-//		myModel.setBiker(); 
-//		
-//		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
-//		
-//		//now the case where you reset the biker
-// 		myModel.setBiker();
-//		assertTrue(myPackagePanel.getBiker().getName() == "Beatrice");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "Beatrice");
-//	}
-//	
-//	@Test
-//	public void testNotifyObserver4()throws DeliveryAbortedException{
-//		bikePool.add(james);
-//		bikePool.add(beatrice);
-//		bikePool.add(jackson);
-//		mySchedule.populateSchedule(bikePool);
-//
-//		PackagePanel myPackagePanel= new PackagePanel(myModel); 
-//		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
-//		myModel.setBiker(); 
-//		
-//		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
-//		
-//		//now the case where you reset the biker
-// 		myModel.setBiker();
-//		assertTrue(myPackagePanel.getBiker().getName() == "Beatrice");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "Beatrice");
-//		
-// 		myModel.setBiker();
-//		assertTrue(myPackagePanel.getBiker().getName() == "James");
-//		assertTrue(myPizzaPanel.getBiker().getName() == "James");
-//		
-//		assertThrows(DeliveryAbortedException.class, ()-> {
-//			myModel.setBiker();
-//		});
-//
-//		
-//	}
+	@Test
+	public void testNotifyObserverSingle() throws SchedulingErrorException {
+		bikePool.add(james);
+		bikePool.add(beatrice);
+		bikePool.add(jackson);
+		mySchedule.populateSchedule(bikePool);
+
+		PackagePanel myPackagePanel= new PackagePanel(myModel);
+		myModel.setBiker(); 
+		
+		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
+ 		
+	}
+	
+	@Test
+	public void testNotifyObserver2() throws SchedulingErrorException {
+		bikePool.add(james);
+		bikePool.add(beatrice);
+		bikePool.add(jackson);
+		mySchedule.populateSchedule(bikePool);
+
+		PackagePanel myPackagePanel= new PackagePanel(myModel); 
+		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
+		myModel.setBiker(); 
+		
+		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
+		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
+	
+	}
+	
+	@Test
+	public void testNotifyObserver3()throws SchedulingErrorException{
+		bikePool.add(james);
+		bikePool.add(beatrice);
+		bikePool.add(jackson);
+		mySchedule.populateSchedule(bikePool);
+
+		PackagePanel myPackagePanel= new PackagePanel(myModel); 
+		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
+		myModel.setBiker(); 
+		
+		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
+		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
+		
+		//now the case where you reset the biker
+ 		myModel.setBiker();
+ 		
+ 		Model m = myModel;
+		assertTrue(myPackagePanel.getBiker().getName() == "Beatrice");
+		assertTrue(myPizzaPanel.getBiker().getName() == "Beatrice"); 
+	}
+	
+	@Test
+	public void testNotifyObserver4()throws SchedulingErrorException{
+		bikePool.add(james);
+		bikePool.add(beatrice);
+		bikePool.add(jackson);
+		mySchedule.populateSchedule(bikePool);
+
+		PackagePanel myPackagePanel= new PackagePanel(myModel); 
+		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
+		myModel.setBiker(); 
+		
+		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
+		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");
+		
+		//now the case where you reset the biker
+ 		myModel.setBiker();
+		assertTrue(myPackagePanel.getBiker().getName() == "Beatrice");
+		assertTrue(myPizzaPanel.getBiker().getName() == "Beatrice");
+		
+ 		myModel.setBiker();
+		assertTrue(myPackagePanel.getBiker().getName() == "James");
+		assertTrue(myPizzaPanel.getBiker().getName() == "James");
+		
+		assertThrows(DeliveryAbortedException.class, ()-> {
+			myModel.setBiker();
+		});
+
+		
+	}
 //	
 //	
 ////	

@@ -32,7 +32,7 @@ public class BikeSchedule extends TemplateSchedule{
 		try {
 			return executeRemoveNextLogic();
 		}
-		catch (Exception NoSuchElementException) {
+		catch (Exception EmptyStackException) {
 			throw new DeliveryAbortedException("Sorry, No one is available for delivery :(( ");
 		}
 		finally {
@@ -43,7 +43,7 @@ public class BikeSchedule extends TemplateSchedule{
 	@Override
 	protected Object executeRemoveNextLogic() {
 		
-		return aSchedule.lastElement();
+		return aSchedule.pop();
 	}
 
 	@Override
