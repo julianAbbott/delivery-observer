@@ -7,12 +7,11 @@ import com.comp303.service.bike.model.BikeCourier;
 
 public interface Scheduler {
 
-	void runSchedulerAlgorithm(Collection pToSchedule);
+	void populateSchedule(Collection pToSchedule);
 
 	void add(Object o);
 
-	Object getNext() throws DeliveryAbortedException;
-	
+	Object getNext() throws SchedulingErrorException;
 
 
 }

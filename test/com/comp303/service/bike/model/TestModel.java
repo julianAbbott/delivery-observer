@@ -13,7 +13,7 @@ import java.util.Queue;
 
 import org.junit.Test;
 
-import com.comp303.common.schedule.DeliveryAbortedException;
+import com.comp303.common.schedule.AbstractBikerSchedule;
 import com.comp303.common.schedule.Scheduler;
 import com.comp303.common.util.Employee;
 import com.comp303.service.bike.panels.PackagePanel;

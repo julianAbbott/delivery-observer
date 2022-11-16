@@ -1,4 +1,4 @@
-package com.comp303.common.schedule;
+package com.comp303.service.bike.model;
 
 public class DeliveryAbortedException extends Exception{ 
 	public DeliveryAbortedException() {
