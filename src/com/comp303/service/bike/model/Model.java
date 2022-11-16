@@ -17,7 +17,7 @@ public class Model {
 	private BikeCourier aCurBiker;
 
 	public Model(AbstractBikerSchedule pScheduler) { 
-		aSchedule = pScheduler;
+		aSchedule = pScheduler;  
 	}
 	
 	
