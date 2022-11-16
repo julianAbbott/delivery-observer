@@ -127,38 +127,4 @@ public class TestModel {
 
 		
 	}
-//	
-//	
-////	
-////	
-////	class TestAlgorithm extends AbstractBikerSchedule{
-////		private Stack<BikeCourier> aSchedule = new Stack<BikeCourier>();
-////
-////		@Override
-////		public void populateSchedule(Collection pToSchedule) { 
-////			for (Object cur : pToSchedule) {
-////				BikeCourier curCasted = (BikeCourier) cur; 
-////				aSchedule.push(curCasted);
-////			}
-////		}
-////
-////		@Override
-////		public void add(Object o) {
-////			BikeCourier pBiker = (BikeCourier) o;
-////			aSchedule.push(pBiker); //FIFO 
-////		}
-////
-////		@Override
-////		public Object getNext() throws DeliveryAbortedException {
-////			try {
-////				return aSchedule.pop();
-////			}
-////			catch (Exception EmptyStackException) {
-////				throw new DeliveryAbortedException("Unable to schedule Biker Delivery.");
-////			}
-////		}
-////		
-////	}
-//
-//	
 }
