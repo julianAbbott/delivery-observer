@@ -32,7 +32,7 @@ public class Model {
 		}
 		
 	}
-	public void setBiker() throws SchedulingErrorException {
+	public void setBiker() throws SchedulingErrorException, DeliveryAbortedException {
 		aCurBiker = (BikeCourier) aSchedule.getNext();
 		notifyObservers();
 	}

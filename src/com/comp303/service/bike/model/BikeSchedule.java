@@ -3,6 +3,7 @@ package com.comp303.service.bike.model;
 import java.util.Collection;
 import java.util.Stack;
 
+import com.comp303.common.schedule.SchedulingErrorException;
 import com.comp303.common.schedule.TemplateSchedule;
 
 public class BikeSchedule extends TemplateSchedule{
@@ -24,6 +25,19 @@ public class BikeSchedule extends TemplateSchedule{
 		BikeCourier pCasted = (BikeCourier) o;
 		aSchedule.push(pCasted);
 		
+	}
+	
+	@Override
+	public Object getNext() throws DeliveryAbortedException  {
+		try {
+			return executeRemoveNextLogic();
+		}
+		catch (Exception NoSuchElementException) {
+			throw new DeliveryAbortedException("Sorry, No one is available for delivery :(( ");
+		}
+		finally {
+			log();
+		}
 	}
 
 	@Override

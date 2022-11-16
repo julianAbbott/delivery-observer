@@ -1,6 +1,8 @@
 package com.comp303.service.bike.model;
 
-public class DeliveryAbortedException extends Exception{ 
+import com.comp303.common.schedule.SchedulingErrorException;
+
+public class DeliveryAbortedException extends SchedulingErrorException{ 
 	public DeliveryAbortedException() {
 		super();
 	}
