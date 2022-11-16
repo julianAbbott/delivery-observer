@@ -1,21 +1,11 @@
 package com.comp303.service.bike.model;
 
+import org.junit.Test;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.EmptyStackException;
-import java.util.LinkedList;
 import java.util.Random;
-import java.util.Stack;
-import java.util.Queue;
-
-import org.junit.Test;
-
-import com.comp303.common.schedule.Scheduler;
 import com.comp303.common.schedule.SchedulingErrorException;
-import com.comp303.common.util.Employee;
 import com.comp303.service.bike.panels.PackagePanel;
 import com.comp303.service.bike.panels.PizzaPanel;
 public class TestModel {
@@ -52,6 +42,8 @@ public class TestModel {
 		bikePool.add(beatrice);
 		bikePool.add(jackson);
 		mySchedule.populateSchedule(bikePool);
+		
+		
 
 		PackagePanel myPackagePanel= new PackagePanel(myModel);
 		myModel.setBiker(); 
@@ -70,6 +62,8 @@ public class TestModel {
 		PackagePanel myPackagePanel= new PackagePanel(myModel); 
 		PizzaPanel myPizzaPanel = new PizzaPanel(myModel);
 		myModel.setBiker(); 
+		
+		ArrayList<BikeCourier> bp = bikePool;
 		
 		assertTrue(myPackagePanel.getBiker().getName() == "Jackson");
 		assertTrue(myPizzaPanel.getBiker().getName() == "Jackson");

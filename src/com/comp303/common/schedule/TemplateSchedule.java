@@ -4,6 +4,14 @@ import java.util.Collection;
 import java.util.Queue;
 import java.util.Stack;
 
+
+/**
+ * Partial implementation of scheduling algorithm. 
+ *  
+ * @author Julian Abbott
+ *
+ */
+
 public abstract class TemplateSchedule implements Scheduler{
 
 	private Collection aSchedule;

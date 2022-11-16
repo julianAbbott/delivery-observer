@@ -2,6 +2,7 @@ package com.comp303.service.bike.model;
 
 import com.comp303.common.util.Employee;
 
+
 public class BikeCourier extends Employee{
 	private final String aName;
 	private final int aPin;
