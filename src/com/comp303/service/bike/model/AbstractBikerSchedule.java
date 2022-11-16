@@ -2,19 +2,20 @@ package com.comp303.service.bike.model;
 
 import java.util.Collection;
 import java.util.Queue;
+import java.util.Stack;
 
 import com.comp303.common.schedule.DeliveryAbortedException;
 import com.comp303.common.schedule.Scheduler;
 
 public abstract class AbstractBikerSchedule implements Scheduler{
 
-	private Queue<BikeCourier> aSchedule;
+	private Stack<BikeCourier> aSchedule;
 
 	@Override
 	public void runSchedulerAlgorithm(Collection pToSchedule) { 
 		for (Object cur : pToSchedule) {
 			BikeCourier curCasted = (BikeCourier) cur; 
-			aSchedule.add(curCasted);
+			aSchedule.push(curCasted);
 		}
 		
 	}
@@ -22,15 +23,17 @@ public abstract class AbstractBikerSchedule implements Scheduler{
 	@Override
 	public void add(Object o) {
 		BikeCourier pBiker = (BikeCourier) o;
-		aSchedule.add(pBiker); //FIFO 
+		aSchedule.push(pBiker); //FIFO 
 	}
 
 	@Override
 	public Object getNext() throws DeliveryAbortedException {
-		if (aSchedule.peek() == null) {
+		try {
+			return aSchedule.pop();
+		}
+		catch (Exception EmptyStackException) {
 			throw new DeliveryAbortedException("Unable to schedule Biker Delivery.");
 		}
-		return aSchedule.peek();
 	}
 
 }
