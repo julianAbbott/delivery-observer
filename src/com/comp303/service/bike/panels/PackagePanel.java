@@ -17,8 +17,10 @@ public class PackagePanel implements Observer {
 
 	@Override
 	public void upDate(Employee pEmployee) {
-		aBiker= (BikeCourier) pEmployee;
+		aBiker=(BikeCourier) pEmployee;
 	}
 	
-
+	public BikeCourier getBiker() {
+		return aBiker;
+	}
 }

@@ -12,17 +12,12 @@ import com.comp303.common.util.Observer;
 
 public class Model {
 
-	private Scheduler aSchedule;
-	private List<Observer> aObservers = new ArrayList<Observer>();
+	private AbstractBikerSchedule aSchedule;
+	List<Observer> aObservers = new ArrayList<Observer>();
 	private BikeCourier aCurBiker;
 
-	public Model(Collection<Employee> pToSchedule, Scheduler pScheduler) { 
-		aSchedule = pScheduler.copy();
-		aSchedule.runSchedulerAlgorithm(pToSchedule);
-	}
-	
-	public void runScheduler(Collection<Employee> pToSchedule) {
-		aSchedule.runSchedulerAlgorithm(pToSchedule);
+	public Model(AbstractBikerSchedule pScheduler) { 
+		aSchedule = pScheduler;
 	}
 	
 	
@@ -43,5 +38,9 @@ public class Model {
 
 	public BikeCourier getBiker() {
 		return aCurBiker;
+	}
+	
+	protected List<Observer> getObservers(){
+		return aObservers;
 	}
 }

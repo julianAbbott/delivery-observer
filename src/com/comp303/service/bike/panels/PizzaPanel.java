@@ -20,5 +20,7 @@ public class PizzaPanel implements Observer {
 		aBiker= (BikeCourier) pEmployee;
 	}
 	
-
+	public BikeCourier getBiker() {
+		return aBiker;
+	}
 }

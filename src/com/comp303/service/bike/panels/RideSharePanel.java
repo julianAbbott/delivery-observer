@@ -20,5 +20,7 @@ public class RideSharePanel implements Observer {
 		aBiker= (BikeCourier) pEmployee;
 	}
 	
-
+	public BikeCourier getBiker() {
+		return aBiker;
+	}
 }
