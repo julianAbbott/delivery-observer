@@ -16,8 +16,8 @@ public class PackagePanel implements Observer {
 	}
 
 	@Override
-	public void upDate(Employee pEmployee) {
-		aBiker=(BikeCourier) pEmployee;
+	public void upDate() {
+		aBiker = aModel.getBiker();
 	}
 	
 	public BikeCourier getBiker() {

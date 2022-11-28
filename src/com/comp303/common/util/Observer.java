@@ -1,5 +1,6 @@
 package com.comp303.common.util;
 
+
 /**
  * API for Observer panels
  * @author julian
@@ -7,5 +8,5 @@ package com.comp303.common.util;
  */
 public interface Observer {
 	
-	public void upDate(Employee pEmployee);
+	public void upDate();
 }

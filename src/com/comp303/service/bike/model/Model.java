@@ -18,7 +18,7 @@ import com.comp303.common.util.Observer;
 public class Model {
 
 	private TemplateSchedule aSchedule;
-	List<Observer> aObservers = new ArrayList<Observer>();
+	private List<Observer> aObservers = new ArrayList<Observer>();
 	private BikeCourier aCurBiker;
 	
 	
@@ -44,7 +44,7 @@ public class Model {
 	 */
 	public void notifyObservers() {
 		for (Observer observer: aObservers) {
-			observer.upDate((Employee) aCurBiker);
+			observer.upDate();
 		}
 	}
 	

@@ -16,9 +16,10 @@ public class RideSharePanel implements Observer {
 	}
 
 	@Override
-	public void upDate(Employee pEmployee) {
-		aBiker= (BikeCourier) pEmployee;
+	public void upDate() {
+		aBiker = aModel.getBiker();
 	}
+	
 	
 	public BikeCourier getBiker() {
 		return aBiker;
