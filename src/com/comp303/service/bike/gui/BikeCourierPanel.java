@@ -6,6 +6,7 @@ import com.comp303.service.bike.gui.panels.PackagePanel;
 import com.comp303.service.bike.gui.panels.PizzaPanel;
 import com.comp303.service.bike.gui.panels.RideSharePanel;
 
+@SuppressWarnings("serial")
 public class BikeCourierPanel extends JPanel {
 	
 	private PackagePanel aPackagePanel;
@@ -29,4 +30,5 @@ public class BikeCourierPanel extends JPanel {
 	public void showRideShare() {
 		add(aRideSharePanel.getBikerLabel());
 	}
+	
 }
