@@ -1,15 +1,15 @@
-package com.comp303.service.bike.panels;
+package com.comp303.service.bike.gui.panels;
 
 import com.comp303.common.util.Employee;
 import com.comp303.common.util.Observer;
 import com.comp303.service.bike.model.BikeCourier;
 import com.comp303.service.bike.model.Model;
 
-public class RideSharePanel implements Observer {
+public class PizzaPanel implements Observer {
 	private Model aModel;
 	private BikeCourier aBiker;
 	
-	public RideSharePanel(Model pModel) {
+	public PizzaPanel(Model pModel) {
 		aModel = pModel;
 		aModel.addObserver(this);
 		aBiker= aModel.getBiker();

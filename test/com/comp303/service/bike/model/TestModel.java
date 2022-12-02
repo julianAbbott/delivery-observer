@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Random;
 import com.comp303.common.schedule.SchedulingErrorException;
-import com.comp303.service.bike.panels.PackagePanel;
-import com.comp303.service.bike.panels.PizzaPanel;
+import com.comp303.service.bike.gui.panels.PackagePanel;
+import com.comp303.service.bike.gui.panels.PizzaPanel;
 public class TestModel {
 	
 		Random rand = new Random();
