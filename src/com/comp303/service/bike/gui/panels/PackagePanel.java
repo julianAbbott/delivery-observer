@@ -18,7 +18,7 @@ public class PackagePanel  implements Observer {
 		aModel = pModel;
 		aModel.addObserver(this);
 		aBiker= aModel.getBiker();
-		aBikerLabel=new JLabel(aBiker.getName());
+		aBikerLabel=new JLabel(aBiker.getName() + " is on their way with your package!");
 	}
 
 	@Override

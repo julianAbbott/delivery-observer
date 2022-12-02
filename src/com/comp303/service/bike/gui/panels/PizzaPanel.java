@@ -19,7 +19,7 @@ public class PizzaPanel  implements Observer {
 		aModel = pModel;
 		aModel.addObserver(this);
 		aBiker= aModel.getBiker();
-		aBikerLabel=new JLabel(aBiker.getName());
+		aBikerLabel=new JLabel(aBiker.getName()+ " is on their way with your Pizza!");
 	}
 
 	@Override

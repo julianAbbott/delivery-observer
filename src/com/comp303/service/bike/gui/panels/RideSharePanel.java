@@ -19,7 +19,7 @@ public class RideSharePanel  implements Observer {
 		aModel = pModel;
 		aModel.addObserver(this);
 		aBiker= aModel.getBiker();
-		aBikerLabel=new JLabel(aBiker.getName());
+		aBikerLabel=new JLabel(aBiker.getName() + " is on their way to pick you up!");
 	}
 
 	@Override
