@@ -28,6 +28,7 @@ public class Model {
 	 */
 	public Model(TemplateSchedule pSchedule) { 
 		aSchedule = pSchedule;  
+
 	}
 	
 	/**
